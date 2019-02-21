@@ -1,0 +1,2 @@
+module Dashboard::ShiftsHelper
+end

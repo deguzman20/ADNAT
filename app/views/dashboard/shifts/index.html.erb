@@ -1,0 +1,11 @@
+<table>
+ <tr>
+  <th></td>
+  <td></td>
+ </tr>
+ <%= @shifts.each do |shift| %>
+  <tr>
+   <td><%= shift.user.name  %></td>
+  </tr>
+ <% end %>
+</table>

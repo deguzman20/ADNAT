@@ -1,0 +1,13 @@
+<h1><a href="">Andat</a></h1>
+<% if signed_in? %>
+  logged in as <%= current_user.name %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete)%>
+<% end %>
+
+<%= form_for :organization, url: dashboard_update_organization_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder:'name', value: @organization.name %>  
+  <%= f.label :hourly_rate %>
+  <%= f.text_field :hourly_rate, placeholder:'rate per hour', value: @organization.hourly_rate %>  
+  <%= f.submit %>
+<% end %>
