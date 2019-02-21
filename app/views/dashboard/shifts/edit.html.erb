@@ -11,7 +11,7 @@
  <% @shifts.each do |shift| %>
   <tr>
    <td><%= shift.user.name  %></td>
-   <td><%= Date.strptime(shift.created_at, "%m/%d/%Y") %></td>
+   <td><%= shift.created_at %></td>
    <td><%= shift.start %></td>
    <td><%= shift.finish %></td>
    <td><%= shift.break_length %></td>
